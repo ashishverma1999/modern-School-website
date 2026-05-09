@@ -52,5 +52,8 @@ RUN php artisan package:discover --ansi \
     && chmod +x /usr/local/bin/entrypoint \
     && chown -R www-data:www-data storage bootstrap/cache
 
+EXPOSE 10000
+
 ENTRYPOINT ["entrypoint"]
-CMD ["php-fpm"]
+
+CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
