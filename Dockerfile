@@ -5,8 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 
-COPY resources ./resources
-COPY vite.config.js ./
+COPY . .
 RUN npm run build
 
 FROM php:8.3-fpm-alpine
