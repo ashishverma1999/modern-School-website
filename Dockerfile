@@ -22,6 +22,7 @@ RUN apk add --no-cache \
         libzip-dev \
         mysql-client \
         oniguruma-dev \
+        sqlite-dev \
         zip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install \
@@ -32,6 +33,7 @@ RUN apk add --no-cache \
         mbstring \
         opcache \
         pdo_mysql \
+        pdo_sqlite \
         zip
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
