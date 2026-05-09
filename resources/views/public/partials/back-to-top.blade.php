@@ -1,0 +1,1 @@
+<a href="#home" class="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center border-2 border-[#143060] bg-white text-3xl leading-none text-[#143060] shadow-md hover:bg-[#ffd200]" aria-label="Back to top">↑</a>
