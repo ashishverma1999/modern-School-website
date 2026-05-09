@@ -48,6 +48,32 @@ After the first deployment, run migrations from your local machine using the pro
 php artisan migrate --force
 ```
 
+## Running with Docker
+
+Build and start the Laravel app, Nginx, and MySQL:
+
+```bash
+docker compose up --build -d
+```
+
+Run migrations:
+
+```bash
+docker compose exec app php artisan migrate
+```
+
+Open the app at:
+
+```text
+http://localhost:8080
+```
+
+Stop the containers:
+
+```bash
+docker compose down
+```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
