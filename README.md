@@ -38,9 +38,7 @@ If you use the gallery image upload in the admin panel, also configure an S3-com
 
 Generate `APP_KEY` locally with:
 
-```bash
-php artisan key:generate --show
-```
+
 
 After the first deployment, run migrations from your local machine using the production database variables:
 
