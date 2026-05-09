@@ -7,6 +7,47 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Deploying to Vercel
+
+This Laravel app can be deployed to Vercel through the community PHP runtime configured in `vercel.json`.
+
+1. Push this repository to GitHub, GitLab, or Bitbucket.
+2. Create an external database, then run the Laravel migrations against it. Vercel's filesystem is serverless, so do not use SQLite for production.
+3. Import the repository in Vercel.
+4. In Vercel project settings, add these environment variables:
+
+```dotenv
+APP_NAME="School Website"
+APP_ENV=production
+APP_KEY=base64:your-generated-key
+APP_DEBUG=false
+APP_URL=https://your-vercel-domain.vercel.app
+DB_CONNECTION=mysql
+DB_HOST=your-db-host
+DB_PORT=3306
+DB_DATABASE=your-db-name
+DB_USERNAME=your-db-user
+DB_PASSWORD=your-db-password
+SESSION_DRIVER=database
+CACHE_STORE=database
+QUEUE_CONNECTION=sync
+LOG_CHANNEL=stderr
+```
+
+If you use the gallery image upload in the admin panel, also configure an S3-compatible disk and set `FILESYSTEM_DISK=s3`. Local uploads are not persistent on Vercel.
+
+Generate `APP_KEY` locally with:
+
+```bash
+php artisan key:generate --show
+```
+
+After the first deployment, run migrations from your local machine using the production database variables:
+
+```bash
+php artisan migrate --force
+```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
