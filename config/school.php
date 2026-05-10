@@ -30,9 +30,9 @@ return [
     ],
 
     'slides' => [
-        'https://maniram.steppingstone.school/images/slider/slide1.jpg',
-        'https://maniram.steppingstone.school/images/slider/slide2.jpg',
-        'https://maniram.steppingstone.school/images/slider/slide3.jpg',
+        '/images/background.jpg',
+        '/images/background1.jpg',
+        '/images/background3.jpg',
     ],
 
     'notices' => [
@@ -55,23 +55,69 @@ return [
     ],
 
     'gallery_fallback' => [
-        ['title' => 'Campus Life', 'image' => 'https://maniram.steppingstone.school/images/slider/slide4.jpg', 'category' => 'Campus'],
-        ['title' => 'Academic Environment', 'image' => 'https://maniram.steppingstone.school/images/right-1.png', 'category' => 'Academics'],
-        ['title' => 'School Activities', 'image' => 'https://maniram.steppingstone.school/images/slider/slide2.jpg', 'category' => 'Activities'],
+        ['title' => 'Campus Life', 'image' => '/images/background.jpg', 'category' => 'Campus'],
+        ['title' => 'Academic Environment', 'image' => '/images/background1.jpg', 'category' => 'Academics'],
+        ['title' => 'School Activities', 'image' => '/images/background3.jpg', 'category' => 'Activities'],
     ],
 
     'messages' => [
         [
             'title' => "Director's Desk",
-            'name' => 'Stepping Stone Inter College',
-            'image' => 'https://maniram.steppingstone.school/images/right-1.png',
+            'name' => 'Director',
+            'image' => '/images/director.jpg',
             'text' => 'The institution believes in value-based education, disciplined habits and a learning environment where every child is encouraged to grow with confidence.',
         ],
         [
             'title' => "Principal's Desk",
-            'name' => 'Maniram Campus',
-            'image' => 'https://maniram.steppingstone.school/images/slider/slide2.jpg',
+            'name' => 'Principal',
+            'image' => '/images/principal.jpg',
             'text' => 'Academic rigor is balanced with creativity, sports, language skills and social responsibility so students are ready for the world beyond classrooms.',
+        ],
+        [
+            'title' => "Chairman's Message",
+            'name' => 'Chairman',
+            'image' => '/images/chairman.jpg',
+            'text' => 'Our vision is to create a thoughtful campus where knowledge, character and purposeful action grow together for every student.',
+        ],
+    ],
+
+    'toppers' => [
+        [
+            'class' => 'Class: X',
+            'items' => [
+                ['name' => 'Akshara Verma', 'score' => '96.4%', 'image' => '/images/topper1.jpg'],
+                ['name' => 'Topper Student', 'score' => '95.8%', 'image' => '/images/topper2.jpg'],
+                ['name' => 'Merit Holder', 'score' => '95.2%', 'image' => '/images/topper3.jpg'],
+                ['name' => 'Scholar Student', 'score' => '94.8%', 'image' => '/images/topper4.jpg'],
+            ],
+        ],
+        [
+            'class' => 'Class: XII',
+            'items' => [
+                ['name' => 'Piyush Maurya', 'score' => '96%', 'image' => '/images/topper5.jpg'],
+                ['name' => 'Senior Topper', 'score' => '95.6%', 'image' => '/images/topper6.png'],
+                ['name' => 'Academic Star', 'score' => '95.1%', 'image' => '/images/topper7.png'],
+                ['name' => 'Board Achiever', 'score' => '94.5%', 'image' => '/images/topper8.png'],
+            ],
+        ],
+    ],
+
+    'birthdays' => [
+        [
+            'group' => 'Students',
+            'items' => [
+                ['name' => 'Reyansh Yadav', 'detail' => 'Class -1-B', 'image' => '/images/bday1.jpg'],
+                ['name' => 'Birthday Student', 'detail' => 'Class -2-A', 'image' => '/images/topper2.jpg'],
+                ['name' => 'Young Learner', 'detail' => 'Class -3-C', 'image' => '/images/topper3.jpg'],
+            ],
+        ],
+        [
+            'group' => 'Teachers',
+            'items' => [
+                ['name' => 'Ram', 'detail' => 'Teacher', 'image' => '/images/principal.jpg'],
+                ['name' => 'Faculty Member', 'detail' => 'Teacher', 'image' => '/images/director.jpg'],
+                ['name' => 'Mentor', 'detail' => 'Teacher', 'image' => '/images/chairman.jpg'],
+            ],
         ],
     ],
 
@@ -85,19 +131,19 @@ return [
         [
             'name' => 'Aarav Singh',
             'role' => 'Class X Student',
-            'image' => 'https://maniram.steppingstone.school/images/right-1.png',
+            'image' => '/images/topper1.jpg',
             'text' => 'Stepping Stone Inter College has helped me become more confident in academics, sports and communication. Teachers guide us with patience and encourage us to take responsibility for our future.',
         ],
         [
             'name' => 'Parent Review',
             'role' => 'Guardian',
-            'image' => 'https://maniram.steppingstone.school/images/slider/slide2.jpg',
+            'image' => '/images/chairman.jpg',
             'text' => 'The school focuses on discipline, values and overall development. Regular activities, supportive teachers and a caring environment make learning meaningful for children.',
         ],
         [
             'name' => 'Faculty Review',
             'role' => 'Teacher',
-            'image' => 'https://maniram.steppingstone.school/images/slider/slide3.jpg',
+            'image' => '/images/principal.jpg',
             'text' => 'Working with students here is rewarding because the school culture values curiosity, sincerity and growth. Every child is encouraged to participate and improve.',
         ],
     ],

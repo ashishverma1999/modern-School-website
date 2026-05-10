@@ -114,6 +114,65 @@
         opacity: 1;
     }
 
+    .blue-image-panel {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .carousel-control {
+        align-items: center;
+        background: #ffd200;
+        color: #102f67;
+        display: inline-flex;
+        flex: 0 0 auto;
+        font-size: 1.75rem;
+        height: 3.25rem;
+        justify-content: center;
+        line-height: 1;
+        opacity: 0.82;
+        transition: background-color 180ms ease, color 180ms ease, opacity 180ms ease;
+        width: 3.25rem;
+    }
+
+    .carousel-control:hover {
+        background: #ffffff;
+        opacity: 1;
+    }
+
+    .profile-stage {
+        height: 16.75rem;
+        overflow: hidden;
+        position: relative;
+        width: min(11rem, 42vw);
+    }
+
+    .profile-slide {
+        inset: 0;
+        opacity: 0;
+        position: absolute;
+        transition: opacity 450ms ease;
+    }
+
+    .profile-slide.is-active {
+        opacity: 1;
+    }
+
+    .profile-photo {
+        height: 11rem;
+        margin: 0 auto;
+        object-fit: cover;
+        width: 9.5rem;
+    }
+
+    .message-slide {
+        display: none;
+    }
+
+    .message-slide.is-active {
+        display: block;
+    }
+
     .review-slide {
         display: none;
     }

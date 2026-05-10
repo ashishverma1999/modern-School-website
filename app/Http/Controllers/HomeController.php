@@ -20,6 +20,8 @@ class HomeController extends Controller
             'notices' => config('school.notices'),
             'facilities' => config('school.facilities'),
             'messages' => config('school.messages'),
+            'toppers' => config('school.toppers'),
+            'birthdays' => config('school.birthdays'),
             'aboutHighlights' => config('school.about_highlights'),
             'reviews' => config('school.reviews'),
             'galleryItems' => $this->galleryItems(),
