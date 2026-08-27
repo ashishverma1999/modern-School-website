@@ -4,7 +4,6 @@
     @include('public.partials.topbar')
     @include('public.partials.navigation')
     @include('public.partials.side-shortcuts')
-    @include('public.partials.header')
 
     <main id="home">
         @include('public.partials.hero')
@@ -15,6 +14,7 @@
         @include('public.partials.reviews')
         @include('public.partials.achievements-birthdays')
         @include('public.partials.admissions')
+        @include('public.partials.faq')
     </main>
 
     @include('public.partials.footer')

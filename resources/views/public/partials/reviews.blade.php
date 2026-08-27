@@ -1,16 +1,54 @@
-<section id="reviews" class="school-bg py-20">
-    <div class="mx-auto max-w-6xl px-4 text-center lg:px-0">
-        <h2 class="section-title">Our <span>Reviews</span></h2>
-        <div class="section-rule mx-auto mt-3"></div>
+<section id="reviews" class="bg-white py-20 lg:py-28 relative border-t border-slate-200/60" data-review-carousel>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div class="max-w-2xl">
+                <span class="eyebrow-badge eyebrow-badge-gold">
+                    <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                    Community Trust
+                </span>
+                <h2 class="mt-3 section-title">What Parents & Guardians Say About HMPS</h2>
+                <p class="mt-3 text-slate-600 text-base">Hear from the families whose children learn, grow, and flourish at Happy Model Public School.</p>
+            </div>
 
-        <div class="mx-auto mt-10 max-w-5xl" data-review-carousel>
+            <!-- Carousel Nav Buttons -->
+            <div class="flex items-center gap-2 self-start md:self-auto">
+                <button type="button" class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 text-slate-700 hover:bg-amber-50 hover:border-amber-400 transition-all shadow-xs" data-review-prev aria-label="Previous Review">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button type="button" class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 text-slate-700 hover:bg-amber-50 hover:border-amber-400 transition-all shadow-xs" data-review-next aria-label="Next Review">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Reviews Grid on Desktop / Slides on Mobile -->
+        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             @foreach ($reviews as $review)
-                <article class="review-slide {{ $loop->first ? 'is-active' : '' }}">
-                    <img src="{{ $review['image'] }}" alt="{{ $review['name'] }}" class="mx-auto h-32 w-32 rounded-full border-8 border-[#102f67] object-cover">
-                    <p class="mx-auto mt-8 max-w-4xl text-lg leading-8 text-[#252525]">{{ $review['text'] }}</p>
-                    <h3 class="mt-6 text-2xl font-black text-[#102f67]">{{ $review['name'] }}</h3>
-                    <p class="mt-1 text-base font-semibold text-[#555555]">{{ $review['role'] }}</p>
-                    <a href="#reviews" class="mt-8 inline-flex bg-[#ffd200] px-10 py-4 text-lg font-semibold text-[#102f67] shadow-md hover:bg-[#102f67] hover:text-white">Read More</a>
+                <article class="modern-card p-6 flex flex-col justify-between relative bg-gradient-to-b from-white to-slate-50/50">
+                    <div>
+                        <!-- Star Rating -->
+                        <div class="flex items-center gap-1 text-amber-500 text-sm">
+                            @for ($i = 0; $i < ($review['rating'] ?? 5); $i++)
+                                <span>★</span>
+                            @endfor
+                        </div>
+
+                        <!-- Quote -->
+                        <p class="mt-4 text-sm leading-relaxed text-slate-700 italic">
+                            "{{ $review['text'] }}"
+                        </p>
+                    </div>
+
+                    <!-- Author Info -->
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-3">
+                        <div class="h-10 w-10 rounded-full bg-[#0b2545] text-amber-400 flex items-center justify-center font-bold text-sm flex-none">
+                            {{ substr($review['name'], 0, 1) }}
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-[#0b2545]">{{ $review['name'] }}</h4>
+                            <p class="text-[11px] text-slate-500 font-semibold">{{ $review['role'] }}</p>
+                        </div>
+                    </div>
                 </article>
             @endforeach
         </div>

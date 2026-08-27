@@ -1,20 +1,50 @@
-<section class="school-bg mx-auto grid max-w-6xl gap-0 px-4 pb-20 lg:grid-cols-[52%_48%] lg:px-0" data-message-carousel>
-    <div class="relative z-10 bg-white p-4 shadow-lg">
-        <div class="image-carousel h-[34rem]">
+<section id="leadership" class="bg-slate-50 py-20 lg:py-28 relative">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div class="max-w-2xl">
+                <span class="eyebrow-badge eyebrow-badge-gold">
+                    <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                    Leadership & Guidance
+                </span>
+                <h2 class="mt-3 section-title">Messages from Our Leadership Desk</h2>
+                <p class="mt-3 text-slate-600 text-base">Inspiring values, academic integrity, and personalized mentorship from our leadership team.</p>
+            </div>
+            <a href="#contact" class="btn-navy text-sm self-start md:self-auto">Connect with Office</a>
+        </div>
+
+        <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             @foreach ($messages as $message)
-                <img src="{{ $message['image'] }}" alt="{{ $message['title'] }}" class="carousel-image {{ $loop->first ? 'is-active' : '' }}">
+                <article class="modern-card overflow-hidden flex flex-col justify-between group">
+                    <div class="relative">
+                        <!-- Portrait Image with Zoom Effect -->
+                        <div class="h-72 w-full overflow-hidden bg-slate-200">
+                            <img src="{{ asset(ltrim($message['image'], '/')) }}" alt="{{ $message['name'] }} - {{ $message['title'] }}" class="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <!-- Role Badge Overlay -->
+                        <div class="absolute bottom-3 left-3 right-3">
+                            <span class="inline-block rounded-lg bg-[#07192f]/90 px-3 py-1 text-xs font-bold text-amber-400 backdrop-blur-md">
+                                {{ $message['role'] ?? $message['title'] }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-black text-[#0b2545]">{{ $message['name'] }}</h3>
+                            <p class="text-xs font-bold uppercase tracking-wider text-emerald-700 mt-1">{{ $message['title'] }}</p>
+                            
+                            <blockquote class="mt-4 text-xs sm:text-sm leading-relaxed text-slate-600 italic relative before:content-['“'] before:text-2xl before:text-amber-400 before:mr-1">
+                                {{ $message['text'] }}
+                            </blockquote>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
+                            <span>HMPS Leadership</span>
+                            <span class="text-amber-600">★ ★ ★</span>
+                        </div>
+                    </div>
+                </article>
             @endforeach
         </div>
-    </div>
-    <div id="academics" class="blue-panel mt-10 p-8 text-white shadow-lg lg:mt-12 lg:min-h-[30rem] lg:p-16">
-        @foreach ($messages as $message)
-            <article class="message-slide {{ $loop->first ? 'is-active' : '' }}">
-                <h2 class="text-4xl font-semibold">{{ $message['title'] }}</h2>
-                <h3 class="mt-6 text-2xl font-normal">{{ $message['name'] }}</h3>
-                <p class="mt-6 text-base leading-8 text-white/90">{{ $message['text'] }}</p>
-                <p class="mt-4 text-base leading-8 text-white/90">We believe every child carries a distinct promise. Our responsibility is to discover it, encourage it, and shape it through discipline, values, academics, and confident participation in school life.</p>
-                <a href="#contact" class="mt-10 inline-flex bg-[#ffd200] px-8 py-4 text-base font-semibold text-[#102f67] hover:bg-white">Read More</a>
-            </article>
-        @endforeach
     </div>
 </section>

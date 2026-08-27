@@ -1,61 +1,62 @@
-<section id="achievements-birthdays" class="school-bg py-8 lg:py-12">
-    <div class="mx-auto grid max-w-7xl gap-0 px-4 lg:grid-cols-[52%_48%] lg:px-0">
-        <div class="relative z-10 bg-white p-4 shadow-xl">
-            <div
-                class="blue-image-panel min-h-[32rem] px-6 py-14 text-center text-white lg:px-12"
-                style="background-image: linear-gradient(rgba(16, 47, 103, 0.72), rgba(16, 47, 103, 0.72)), url('/images/background1.jpg')"
-            >
-                <h2 class="text-4xl font-black md:text-5xl">Toppers 2024-25</h2>
-                <div class="section-rule mx-auto mt-3 bg-white/70"></div>
-
-                <div class="mt-10 grid gap-10 md:grid-cols-2">
-                    @foreach ($toppers as $topperGroup)
-                        <div class="profile-carousel" data-profile-carousel>
-                            <h3 class="text-xl font-semibold">{{ $topperGroup['class'] }}</h3>
-                            <div class="mt-6 flex items-center justify-center gap-4">
-                                <button type="button" class="carousel-control" data-profile-prev aria-label="Previous {{ $topperGroup['class'] }} topper">&larr;</button>
-                                <div class="profile-stage">
-                                    @foreach ($topperGroup['items'] as $topper)
-                                        <article class="profile-slide {{ $loop->first ? 'is-active' : '' }}">
-                                            <img src="{{ $topper['image'] }}" alt="{{ $topper['name'] }}" class="profile-photo">
-                                            <h4 class="mt-5 text-xl font-semibold uppercase leading-6">{{ $topper['name'] }}</h4>
-                                            <p class="text-xl leading-6">{{ $topper['score'] }}</p>
-                                        </article>
-                                    @endforeach
-                                </div>
-                                <button type="button" class="carousel-control" data-profile-next aria-label="Next {{ $topperGroup['class'] }} topper">&rarr;</button>
-                            </div>
-                            <a href="#gallery" class="mt-8 inline-flex bg-[#ffd200] px-9 py-3 text-xl font-semibold text-[#102f67] hover:bg-white">View All</a>
-                        </div>
-                    @endforeach
+<section id="downloads" class="bg-slate-50 py-20 lg:py-28 relative border-t border-slate-200/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            <!-- Brochure Card / Preview -->
+            <div class="relative group">
+                <div class="overflow-hidden rounded-3xl bg-white p-3 shadow-2xl border border-slate-200">
+                    <img 
+                        src="{{ asset(ltrim($brochureImage, '/')) }}" 
+                        alt="{{ $school['name'] }} Official Brochure & Prospectus" 
+                        class="w-full max-h-[500px] object-contain rounded-2xl group-hover:scale-[1.02] transition-transform duration-300"
+                    >
+                </div>
+                <div class="mt-4 flex items-center justify-center gap-3">
+                    <a href="{{ asset(ltrim($brochureImage, '/')) }}" target="_blank" class="btn-navy text-xs py-2.5">
+                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                        <span>View Full Prospectus</span>
+                    </a>
+                    <a href="{{ asset(ltrim($brochureImage, '/')) }}" download="HMPS-School-Brochure.jpeg" class="btn-gold text-xs py-2.5">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                        <span>Download Brochure</span>
+                    </a>
                 </div>
             </div>
-        </div>
 
-        <div class="blue-panel mt-10 min-h-[32rem] px-6 py-14 text-center text-white shadow-xl lg:mt-12 lg:px-12">
-            <h2 class="text-4xl font-black md:text-5xl">Today's <span class="text-[#ffd200]">Birthdays</span></h2>
-            <div class="section-rule mx-auto mt-3 bg-white/70"></div>
+            <!-- Text and Quick Links -->
+            <div>
+                <span class="eyebrow-badge eyebrow-badge-gold">
+                    <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                    Prospectus & Information Hub
+                </span>
+                <h2 class="mt-3 section-title">Download Prospectus & Key Information</h2>
+                <div class="section-rule mt-5"></div>
 
-            <div class="mt-10 grid gap-10 md:grid-cols-2">
-                @foreach ($birthdays as $birthdayGroup)
-                    <div class="profile-carousel" data-profile-carousel>
-                        <h3 class="text-xl font-semibold">{{ $birthdayGroup['group'] }}</h3>
-                        <div class="mt-6 flex items-center justify-center gap-4">
-                            <button type="button" class="carousel-control" data-profile-prev aria-label="Previous {{ $birthdayGroup['group'] }} birthday">&larr;</button>
-                            <div class="profile-stage">
-                                @foreach ($birthdayGroup['items'] as $birthday)
-                                    <article class="profile-slide {{ $loop->first ? 'is-active' : '' }}">
-                                        <img src="{{ $birthday['image'] }}" alt="{{ $birthday['name'] }}" class="profile-photo">
-                                        <h4 class="mt-5 text-xl font-normal leading-6">{{ $birthday['name'] }}</h4>
-                                        <p class="text-xl leading-6">{{ $birthday['detail'] }}</p>
-                                    </article>
-                                @endforeach
+                <p class="mt-6 text-base sm:text-lg leading-relaxed text-slate-600">
+                    Get all essential information regarding our educational framework, fee guidelines, transport coverage, school timings, and code of conduct for the upcoming academic session.
+                </p>
+
+                <!-- Quick Action Cards Grid -->
+                <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                    @foreach ($quickLinks as $link)
+                        <a href="{{ $link['url'] }}" class="modern-card p-4 flex items-center justify-between group hover:bg-amber-500 hover:text-white transition-all">
+                            <div class="flex items-center gap-3">
+                                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-amber-800 group-hover:bg-white group-hover:text-slate-900 font-bold">
+                                    ★
+                                </span>
+                                <span class="font-bold text-sm text-[#0b2545] group-hover:text-white">{{ $link['label'] }}</span>
                             </div>
-                            <button type="button" class="carousel-control" data-profile-next aria-label="Next {{ $birthdayGroup['group'] }} birthday">&rarr;</button>
-                        </div>
-                        <a href="#gallery" class="mt-8 inline-flex bg-[#ffd200] px-9 py-3 text-xl font-semibold text-[#102f67] hover:bg-white">View All</a>
+                            <svg class="w-5 h-5 text-amber-500 group-hover:text-white group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    @endforeach
+                </div>
+
+                <div class="mt-8 rounded-2xl bg-amber-100/60 border border-amber-300/60 p-5 flex items-start gap-4">
+                    <div class="flex-none text-2xl">📋</div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900">Need personal counseling?</h4>
+                        <p class="text-xs text-slate-700 mt-0.5">Visit the school administrative office in Maniram Monday to Saturday (8:00 AM – 3:30 PM) or call <strong>{{ $school['phone'] }}</strong>.</p>
                     </div>
-                @endforeach
+                </div>
             </div>
         </div>
     </div>
