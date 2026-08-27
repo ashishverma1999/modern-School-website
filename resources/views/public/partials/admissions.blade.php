@@ -48,7 +48,13 @@
                         </div>
                         <div>
                             <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Direct Admission Helpline</p>
-                            <a href="tel:{{ $school['phone'] }}" class="text-base sm:text-lg font-black text-[#0b2545] hover:text-amber-600">{{ $school['phone'] }}</a>
+                            <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                                <a href="tel:{{ $school['phone'] }}" class="text-base sm:text-lg font-black text-[#0b2545] hover:text-amber-600">{{ $school['phone'] }}</a>
+                                @if (!empty($school['alternate_phone']))
+                                    <span class="text-slate-400 font-bold">/</span>
+                                    <a href="tel:{{ $school['alternate_phone'] }}" class="text-sm sm:text-base font-bold text-[#0b2545] hover:text-amber-600">{{ $school['alternate_phone'] }}</a>
+                                @endif
+                            </div>
                         </div>
                     </div>
 
@@ -58,7 +64,7 @@
                         </div>
                         <div>
                             <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">WhatsApp Support</p>
-                            <a href="https://wa.me/{{ $school['whatsapp'] ?? '917379222286' }}?text=Hello%20HMPS%2C%20I%20want%20to%20know%20about%20admissions." target="_blank" rel="noopener" class="text-sm font-bold text-emerald-700 hover:underline">Chat with Admission Desk</a>
+                            <a href="https://wa.me/{{ $school['whatsapp'] ?? '919793856502' }}?text=Hello%20HMPS%2C%20I%20want%20to%20know%20about%20admissions." target="_blank" rel="noopener" class="text-sm font-bold text-emerald-700 hover:underline">Chat with Admission Desk ({{ $school['whatsapp_display'] ?? '+91 97938 56502' }})</a>
                         </div>
                     </div>
 

@@ -27,8 +27,12 @@
                         <a href="tel:{{ $school['phone'] }}" class="hover:text-amber-400 transition-colors font-bold">{{ $school['phone'] }}</a>
                         @if (!empty($school['alternate_phone']))
                             <span class="text-slate-500">|</span>
-                            <a href="tel:{{ $school['alternate_phone'] }}" class="hover:text-amber-400 transition-colors">{{ $school['alternate_phone'] }}</a>
+                            <a href="tel:{{ $school['alternate_phone'] }}" class="hover:text-amber-400 transition-colors font-bold">{{ $school['alternate_phone'] }}</a>
                         @endif
+                    </p>
+                    <p class="flex items-center gap-2.5">
+                        <span class="text-emerald-400 text-sm">💬</span>
+                        <a href="https://wa.me/{{ $school['whatsapp'] ?? '919793856502' }}" target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors font-bold text-emerald-400">WhatsApp: {{ $school['whatsapp_display'] ?? '+91 97938 56502' }}</a>
                     </p>
                     <p class="flex items-center gap-2.5">
                         <svg class="w-4 h-4 text-amber-400 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>

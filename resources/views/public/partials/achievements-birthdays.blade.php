@@ -54,7 +54,7 @@
                     <div class="flex-none text-2xl">📋</div>
                     <div>
                         <h4 class="font-bold text-sm text-slate-900">Need personal counseling?</h4>
-                        <p class="text-xs text-slate-700 mt-0.5">Visit the school administrative office in Maniram Monday to Saturday (8:00 AM – 3:30 PM) or call <strong>{{ $school['phone'] }}</strong>.</p>
+                        <p class="text-xs text-slate-700 mt-0.5">Visit the school administrative office in Maniram Monday to Saturday (8:00 AM – 3:30 PM) or call <strong>{{ $school['phone'] }}</strong> / <strong>{{ $school['alternate_phone'] }}</strong>.</p>
                     </div>
                 </div>
             </div>
