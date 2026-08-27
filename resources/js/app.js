@@ -270,6 +270,56 @@ const setupBackToTop = () => {
     });
 };
 
+// Language Switcher (English <-> Hindi)
+const setupLanguageTranslator = () => {
+    const triggerTranslation = (targetLang) => {
+        const host = window.location.hostname;
+        const cookieVal = targetLang === 'hi' ? '/en/hi' : '/en/en';
+        document.cookie = `googtrans=${cookieVal}; path=/; domain=${host}`;
+        document.cookie = `googtrans=${cookieVal}; path=/;`;
+
+        // Update active UI state on all language buttons
+        document.querySelectorAll('[data-language-switcher] .lang-btn').forEach(btn => {
+            if (btn.dataset.lang === targetLang) {
+                btn.classList.add('is-active', 'text-amber-500', 'font-extrabold');
+                btn.classList.remove('text-slate-300', 'text-slate-600');
+            } else {
+                btn.classList.remove('is-active', 'text-amber-500', 'font-extrabold');
+                btn.classList.add(btn.closest('.bg-white') ? 'text-slate-600' : 'text-slate-300');
+            }
+        });
+
+        // Trigger Google Translate frame select
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+            select.value = targetLang;
+            select.dispatchEvent(new Event('change'));
+        } else {
+            window.location.reload();
+        }
+    };
+
+    // Attach listeners
+    document.querySelectorAll('[data-language-switcher] .lang-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const lang = btn.dataset.lang;
+            triggerTranslation(lang);
+        });
+    });
+
+    // Check existing cookie on load
+    const match = document.cookie.match(/googtrans=\/en\/([a-z]{2})/);
+    const activeLang = match ? match[1] : 'en';
+    document.querySelectorAll('[data-language-switcher] .lang-btn').forEach(btn => {
+        if (btn.dataset.lang === activeLang) {
+            btn.classList.add('is-active', 'text-amber-500', 'font-extrabold');
+        } else {
+            btn.classList.remove('is-active', 'text-amber-500', 'font-extrabold');
+        }
+    });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     setupHeroCarousel();
     setupGallery();
@@ -278,4 +328,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenu();
     setupForms();
     setupBackToTop();
+    setupLanguageTranslator();
 });

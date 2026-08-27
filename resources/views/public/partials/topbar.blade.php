@@ -15,12 +15,23 @@
             </span>
         </div>
         <div class="flex flex-wrap items-center gap-3 self-end sm:self-auto">
+            <!-- Language Switcher (English <-> Hindi) -->
+            <div class="inline-flex items-center rounded-lg bg-white/10 p-0.5 border border-white/15 text-xs font-bold" data-language-switcher>
+                <button type="button" class="lang-btn is-active px-2 py-0.5 rounded transition-all text-amber-400 font-extrabold" data-lang="en" title="English">
+                    🇬🇧 EN
+                </button>
+                <span class="text-white/30 text-[10px]">|</span>
+                <button type="button" class="lang-btn px-2 py-0.5 rounded transition-all text-slate-300 hover:text-white" data-lang="hi" title="हिन्दी (Hindi)">
+                    🇮🇳 हिन्दी
+                </button>
+            </div>
+
             <span class="hidden lg:inline-flex text-slate-300 text-xs font-medium">🕒 {{ $school['timing'] }}</span>
             <a href="https://wa.me/{{ $school['whatsapp'] ?? '917379222286' }}?text=Hello%20Happy%20Model%20Public%20School%2C%20I%20would%20like%20to%20know%20more%20about%20admissions." target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-semibold text-xs transition-colors">
-                <span>💬 WhatsApp Us</span>
+                <span>💬 WhatsApp</span>
             </a>
             <a href="{{ url('/schoolAdmin') }}" class="inline-flex items-center gap-1 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-2.5 py-0.5 rounded text-xs transition-all shadow-sm">
-                <span>Staff / Admin</span>
+                <span>Admin</span>
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
         </div>

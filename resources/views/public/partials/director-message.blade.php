@@ -32,6 +32,9 @@
                         <div>
                             <h3 class="font-serif text-xl font-black text-[#0b2545]">{{ $message['name'] }}</h3>
                             <p class="text-xs font-bold uppercase tracking-wider text-emerald-700 mt-1">{{ $message['title'] }}</p>
+                            @if (!empty($message['designation']))
+                                <p class="text-[11px] font-semibold text-slate-500 mt-1 leading-snug bg-slate-50 p-2 rounded-lg border border-slate-100">{{ $message['designation'] }}</p>
+                            @endif
                             
                             <blockquote class="mt-4 text-xs sm:text-sm leading-relaxed text-slate-600 italic relative before:content-['“'] before:text-2xl before:text-amber-400 before:mr-1">
                                 {{ $message['text'] }}
