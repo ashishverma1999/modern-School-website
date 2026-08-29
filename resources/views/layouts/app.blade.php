@@ -3,15 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ $pageDescription ?? 'Happy Model Public School - Premier English Medium School in Maniram, Gorakhpur' }}">
-    <meta name="keywords" content="Happy Model Public School, HMPS, School in Maniram, Best School in Gorakhpur, English Medium School, Admissions 2026-27">
+    <meta name="description" content="{{ $pageDescription ?? 'Happy Model Public School - Premier English Medium School in Mungra Badshahpur, Jaunpur' }}">
+    <meta name="keywords" content="Happy Model Public School, HMPS, School in Mungra Badshahpur, Best School in Jaunpur, English Medium School, Admissions 2026-27">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <!-- OpenGraph / Social Meta -->
-    <meta property="og:title" content="{{ $pageTitle ?? 'Happy Model Public School | Maniram, Gorakhpur' }}">
+    <meta property="og:title" content="{{ $pageTitle ?? 'Happy Model Public School | Mungra Badshahpur, Jaunpur' }}">
     <meta property="og:description" content="{{ $pageDescription ?? 'Nurturing confident learners with values, discipline and curiosity.' }}">
     <meta property="og:image" content="{{ asset('images/school_building.jpeg') }}">
     <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/logo.png') }}">
 
     <title>{{ $pageTitle ?? config('app.name') }}</title>
 

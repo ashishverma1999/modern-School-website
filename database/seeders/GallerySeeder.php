@@ -24,7 +24,7 @@ class GallerySeeder extends Seeder
             'school_building.jpeg' => [
                 'title' => 'Main Academic Campus & Building',
                 'category' => 'Campus',
-                'description' => 'Exterior view of the Happy Model Public School campus located at Maniram, Gorakhpur.',
+                'description' => 'Exterior view of the Happy Model Public School campus located at Mungra Badshahpur, Jaunpur.',
                 'is_featured' => true,
             ],
             'school_gallery.jpeg' => [
@@ -36,7 +36,7 @@ class GallerySeeder extends Seeder
             'school_van.jpeg' => [
                 'title' => 'Dedicated School Transport Fleet',
                 'category' => 'Transport',
-                'description' => 'Safe, reliable and supervised school van service connecting nearby localities in Gorakhpur.',
+                'description' => 'Safe, reliable and supervised school van service connecting nearby localities in Jaunpur.',
                 'is_featured' => true,
             ],
             'classroom1.jpeg' => [

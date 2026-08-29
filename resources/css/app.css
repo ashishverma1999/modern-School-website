@@ -22,7 +22,9 @@
 @layer base {
     html {
         scroll-behavior: smooth;
-        scroll-padding-top: 5.5rem;
+        scroll-padding-top: 5rem;
+        -webkit-text-size-adjust: 100%;
+        overflow-x: hidden;
     }
 
     body {
@@ -30,11 +32,19 @@
         color: #1e293b;
         font-family: var(--font-sans);
         overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+        -webkit-tap-highlight-color: transparent;
     }
 
     ::selection {
         background-color: #f59e0b;
         color: #07192f;
+    }
+
+    img, iframe, svg, video {
+        max-width: 100%;
+        height: auto;
     }
 }
 

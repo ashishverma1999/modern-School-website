@@ -88,7 +88,7 @@
             </div>
 
             <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">
-                <span>📍 Maniram Campus</span>
+                <span>📍 Mungra Badshahpur Campus</span>
                 <a href="#admissions" class="text-amber-400 hover:text-amber-300 font-bold underline">Contact Office →</a>
             </div>
         </aside>

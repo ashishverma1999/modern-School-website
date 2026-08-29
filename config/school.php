@@ -4,22 +4,23 @@ return [
     'profile' => [
         'name' => 'Happy Model Public School',
         'short' => 'HMPS',
+        'logo' => '/images/logo.png',
         'tagline' => 'Nurturing confident learners with values, discipline and curiosity.',
-        'subheading' => 'English Medium Co-Educational Institution | Maniram, Gorakhpur',
+        'subheading' => 'English Medium Co-Educational Institution | Mungra Badshahpur, Jaunpur',
         'affiliation' => 'Recognized & Following Modern Progressive Curriculum',
         'email' => 'info@happymodelpublicschool.in',
         'phone' => '+91 93692 47677',
         'alternate_phone' => '+91 76076 03165',
         'whatsapp' => '919793856502',
         'whatsapp_display' => '+91 97938 56502',
-        'location' => 'Maniram, Gorakhpur, Uttar Pradesh',
-        'address' => 'Happy Model Public School, Main Road, Maniram, Gorakhpur - 273007, Uttar Pradesh',
+        'location' => 'Mungra Badshahpur, Jaunpur, Uttar Pradesh',
+        'address' => 'Happy Model Public School, Mungra Badshahpur, Jaunpur, Uttar Pradesh 222202',
         'timing' => 'Monday to Saturday: 8:00 AM – 2:00 PM',
         'office_timing' => 'Monday to Saturday: 8:00 AM – 3:30 PM',
         'facebook' => 'https://facebook.com',
         'instagram' => 'https://instagram.com',
         'youtube' => 'https://youtube.com',
-        'map_embed' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14242.859664567406!2d83.33!3d26.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991448b11111111%3A0x1111111111111111!2sManiram%2C%20Gorakhpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin',
+        'map_embed' => 'https://maps.google.com/maps?q=Mungra+Badshahpur,+Jaunpur,+Uttar+Pradesh+222202&t=&z=14&ie=UTF8&iwloc=&output=embed',
     ],
 
     'navigation' => [
@@ -61,7 +62,7 @@ return [
     'notices' => [
         ['date' => '2026-08-25', 'title' => 'Admissions Open for Academic Session 2026–27 (Nursery to Class VIII). Limited seats available.', 'badge' => 'Admissions'],
         ['date' => '2026-08-22', 'title' => 'Independence Day & Annual Cultural Fest photographs uploaded in the campus gallery.', 'badge' => 'Events'],
-        ['date' => '2026-08-18', 'title' => 'School Van route expansion: New pickup points added across Maniram & adjoining areas.', 'badge' => 'Transport'],
+        ['date' => '2026-08-18', 'title' => 'School Van route expansion: New pickup points added across Mungra Badshahpur & adjoining areas.', 'badge' => 'Transport'],
         ['date' => '2026-08-10', 'title' => 'Parent-Teacher Interaction Meeting scheduled for upcoming Saturday from 9:00 AM.', 'badge' => 'Academic'],
     ],
 
@@ -119,7 +120,7 @@ return [
         [
             'step' => '02',
             'title' => 'Campus Visit & Counseling',
-            'desc' => 'Visit our campus in Maniram for an interactive session, campus tour, and guidance with our admission counselor.',
+            'desc' => 'Visit our campus in Mungra Badshahpur for an interactive session, campus tour, and guidance with our admission counselor.',
         ],
         [
             'step' => '03',
@@ -157,7 +158,7 @@ return [
         [
             'title' => 'Safe Transport Fleet (Vans)',
             'icon' => 'bus',
-            'text' => 'Dedicated school van fleet covering Maniram and adjoining localities with trained drivers and care attendants.',
+            'text' => 'Dedicated school van fleet covering Mungra Badshahpur and adjoining localities with trained drivers and care attendants.',
         ],
         [
             'title' => 'CCTV Surveillance & Safety',
@@ -231,7 +232,7 @@ return [
             'role' => 'Parent of Class VII Student',
             'image' => '/images/classroom2.jpeg',
             'rating' => 5,
-            'text' => 'The focus on science, mathematics, and English communication is commendable. Also, the school van facility is very punctual and convenient for our locality in Maniram.',
+            'text' => 'The focus on science, mathematics, and English communication is commendable. Also, the school van facility is very punctual and convenient for our locality in Mungra Badshahpur.',
         ],
         [
             'name' => 'Pooja Tiwari',
@@ -253,7 +254,7 @@ return [
         ],
         [
             'q' => 'Is transport (school van) available?',
-            'a' => 'Yes, Happy Model Public School provides supervised school van services covering multiple designated routes in Maniram and neighboring areas. Please consult the school office for specific route stops.',
+            'a' => 'Yes, Happy Model Public School provides supervised school van services covering multiple designated routes in Mungra Badshahpur and neighboring areas. Please consult the school office for specific route stops.',
         ],
         [
             'q' => 'What documents are required during admission?',

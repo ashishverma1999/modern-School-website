@@ -16,7 +16,7 @@
 
                 <div class="mt-6 space-y-4 text-base sm:text-lg leading-relaxed text-slate-600">
                     <p>
-                        Established with a mission to deliver accessible, high-quality, English-medium education in Maniram, Gorakhpur, <strong>Happy Model Public School (HMPS)</strong> creates an environment where young minds are encouraged to question, explore, and excel.
+                        Established with a mission to deliver accessible, high-quality, English-medium education in Mungra Badshahpur, Jaunpur, <strong>Happy Model Public School (HMPS)</strong> creates an environment where young minds are encouraged to question, explore, and excel.
                     </p>
                     <p>
                         Our pedagogical philosophy balances academic clarity with moral values, neat handwriting, disciplined habits, physical health, public speaking confidence, and active co-curricular participation.

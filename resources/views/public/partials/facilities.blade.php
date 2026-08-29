@@ -87,7 +87,7 @@
                     <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
                     Safe Student Transport
                 </span>
-                <h2 class="mt-3 section-title">Reliable School Van Service Connecting Maniram & Nearby Areas</h2>
+                <h2 class="mt-3 section-title">Reliable School Van Service Connecting Mungra Badshahpur & Nearby Areas</h2>
                 <div class="section-rule mt-5"></div>
 
                 <p class="mt-6 text-base sm:text-lg leading-relaxed text-slate-600">
@@ -107,7 +107,7 @@
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                             <span>Doorstep / Route Pickups</span>
                         </div>
-                        <p class="mt-1 text-xs text-slate-600">Covering key residential pockets around Maniram & Gorakhpur.</p>
+                        <p class="mt-1 text-xs text-slate-600">Covering key residential pockets around Mungra Badshahpur & Jaunpur.</p>
                     </div>
                     <div class="rounded-xl border border-slate-100 bg-slate-50 p-4">
                         <div class="flex items-center gap-2 text-emerald-700 font-bold text-sm">

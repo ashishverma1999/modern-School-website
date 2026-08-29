@@ -3,13 +3,13 @@
         <div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <!-- Column 1: School Identity & Address -->
             <div>
-                <div class="flex items-center gap-3">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400 text-[#07192f] font-black text-xl">
-                        HM
+                <div class="flex items-center gap-3.5">
+                    <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white p-1.5 shadow-md flex-none">
+                        <img src="{{ asset('images/logo.png') }}" alt="{{ $school['name'] }} Logo" class="h-full w-full object-contain">
                     </div>
                     <div>
                         <h2 class="font-serif text-2xl font-black text-white leading-none">{{ $school['name'] }}</h2>
-                        <p class="text-xs font-bold text-amber-400 uppercase tracking-widest mt-1">Maniram, Gorakhpur</p>
+                        <p class="text-xs font-bold text-amber-400 uppercase tracking-widest mt-1">Mungra Badshahpur, Jaunpur</p>
                     </div>
                 </div>
 
@@ -70,7 +70,7 @@
                 <!-- Map Container / Directions -->
                 <div class="mt-5 rounded-2xl overflow-hidden border border-white/15 bg-white/5 p-1 h-44 relative group">
                     <iframe 
-                        src="{{ $school['map_embed'] ?? 'https://maps.google.com/maps?q=Maniram+Gorakhpur&t=&z=13&ie=UTF8&iwloc=&output=embed' }}" 
+                        src="{{ $school['map_embed'] ?? 'https://maps.google.com/maps?q=Mungra+Badshahpur,+Jaunpur,+Uttar+Pradesh+222202&t=&z=14&ie=UTF8&iwloc=&output=embed' }}" 
                         class="w-full h-full rounded-xl filter grayscale group-hover:grayscale-0 transition-all duration-300"
                         style="border:0;" 
                         allowfullscreen="" 
