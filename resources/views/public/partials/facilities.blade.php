@@ -10,7 +10,7 @@
                 Modern Campus Facilities for Balanced Growth
             </h2>
             <p class="mt-4 text-slate-300 text-base sm:text-lg">
-                Designed to make every school day productive, engaging, secure, and comfortable for children from nursery through middle school.
+                Designed to make every school day productive, engaging, secure, and comfortable for students from pre-nursery through senior secondary (12th grade).
             </p>
         </div>
 

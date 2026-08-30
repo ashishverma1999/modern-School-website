@@ -24,6 +24,7 @@ class AdmissionEnquiryForm
                         TextInput::make('email')->email()->maxLength(150),
                         Select::make('class_applied')
                             ->options([
+                                'Pre-Nursery' => 'Pre-Nursery',
                                 'Nursery' => 'Nursery',
                                 'LKG' => 'LKG',
                                 'UKG' => 'UKG',
@@ -35,7 +36,16 @@ class AdmissionEnquiryForm
                                 'Class VI' => 'Class VI',
                                 'Class VII' => 'Class VII',
                                 'Class VIII' => 'Class VIII',
+                                'Class IX' => 'Class IX',
+                                'Class X' => 'Class X',
+                                'Class XI - Science (PCM/PCB)' => 'Class XI - Science (PCM/PCB)',
+                                'Class XI - Commerce' => 'Class XI - Commerce',
+                                'Class XI - Humanities/Arts' => 'Class XI - Humanities/Arts',
+                                'Class XII - Science (PCM/PCB)' => 'Class XII - Science (PCM/PCB)',
+                                'Class XII - Commerce' => 'Class XII - Commerce',
+                                'Class XII - Humanities/Arts' => 'Class XII - Humanities/Arts',
                             ])
+                            ->searchable()
                             ->required(),
                         TextInput::make('student_age')->numeric()->minValue(2)->maxValue(25),
                         DatePicker::make('preferred_visit_date'),

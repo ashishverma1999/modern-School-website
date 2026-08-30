@@ -15,7 +15,7 @@
             <!-- Admission Open Badge -->
             <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-1.5 backdrop-blur-md">
                 <span class="flex h-2.5 w-2.5 rounded-full bg-amber-400 animate-pulse"></span>
-                <span class="text-xs font-black uppercase tracking-widest text-amber-400">Admissions Open 2026–27 (Nursery – VIII)</span>
+                <span class="text-xs font-black uppercase tracking-widest text-amber-400">Admissions Open 2026–27 (Pre-Nursery – XII)</span>
             </div>
 
             <!-- Main Heading -->
@@ -32,19 +32,19 @@
             <div class="mt-6 flex flex-wrap items-center gap-3 text-xs sm:text-sm font-semibold text-slate-300">
                 <span class="inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-1.5 backdrop-blur-sm">
                     <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    English Medium Co-Ed
+                    Pre-Nursery to Class XII
                 </span>
                 <span class="inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-1.5 backdrop-blur-sm">
                     <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Smart Classrooms
+                    Science, Commerce & Arts
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-1.5 backdrop-blur-sm">
+                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Smart Classrooms & Science Labs
                 </span>
                 <span class="inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-1.5 backdrop-blur-sm">
                     <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     Safe Van Transport
-                </span>
-                <span class="inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-1.5 backdrop-blur-sm">
-                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Values & Discipline
                 </span>
             </div>
 

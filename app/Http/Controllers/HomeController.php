@@ -55,8 +55,8 @@ class HomeController extends Controller
             'galleryCategories' => $this->extractCategories($galleryItems),
             'brochureImage' => $this->findImage($localImages, 'brochure.jpeg') ?? '/images/brochure.jpeg',
             'transportImage' => $this->findImage($localImages, 'school_van.jpeg') ?? '/images/school_van.jpeg',
-            'pageTitle' => "{$school['name']} | Best English Medium School in Mungra Badshahpur, Jaunpur",
-            'pageDescription' => "{$school['name']} is a premier English medium school in Mungra Badshahpur, Jaunpur offering holistic Nursery to Class VIII education with smart classrooms, sports, caring faculty and safe transport.",
+            'pageTitle' => "{$school['name']} | Best English Medium School (Pre to 12th) in Mungra Badshahpur, Jaunpur",
+            'pageDescription' => "{$school['name']} is a premier English medium K-12 school in Mungra Badshahpur, Jaunpur offering Pre-Nursery to Class 12th education (Science, Commerce & Arts) with smart classrooms, advanced science labs, sports, caring faculty and safe transport.",
         ]);
     }
 

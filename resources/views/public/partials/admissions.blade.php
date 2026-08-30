@@ -141,7 +141,28 @@
                             </label>
                             <select name="class_applied" required class="form-input">
                                 <option value="">Select Class...</option>
-                                @foreach (['Nursery', 'LKG', 'UKG', 'Class I', 'Class II', 'Class III', 'Class IV', 'Class V', 'Class VI', 'Class VII', 'Class VIII'] as $cls)
+                                @foreach ([
+                                    'Pre-Nursery',
+                                    'Nursery',
+                                    'LKG',
+                                    'UKG',
+                                    'Class I',
+                                    'Class II',
+                                    'Class III',
+                                    'Class IV',
+                                    'Class V',
+                                    'Class VI',
+                                    'Class VII',
+                                    'Class VIII',
+                                    'Class IX',
+                                    'Class X',
+                                    'Class XI - Science (PCM/PCB)',
+                                    'Class XI - Commerce',
+                                    'Class XI - Humanities/Arts',
+                                    'Class XII - Science (PCM/PCB)',
+                                    'Class XII - Commerce',
+                                    'Class XII - Humanities/Arts',
+                                ] as $cls)
                                     <option value="{{ $cls }}" @selected(old('class_applied') === $cls)>{{ $cls }}</option>
                                 @endforeach
                             </select>

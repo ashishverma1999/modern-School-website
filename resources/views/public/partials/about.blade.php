@@ -79,7 +79,7 @@
                     <h3 class="font-serif text-2xl font-bold text-[#0b2545]">Our Vision</h3>
                 </div>
                 <p class="mt-4 text-base leading-relaxed text-slate-700">
-                    {{ $visionMission['vision'] ?? 'To be a premier center of foundational and middle school education that fosters intellectual curiosity, moral integrity, and lifelong learning.' }}
+                    {{ $visionMission['vision'] ?? 'To be a premier center of holistic K-12 education (Pre-Nursery to Class XII) that fosters intellectual curiosity, moral integrity, scientific temperament, and lifelong learning.' }}
                 </p>
             </div>
 
@@ -92,7 +92,7 @@
                     <h3 class="font-serif text-2xl font-bold text-[#0b2545]">Our Mission</h3>
                 </div>
                 <p class="mt-4 text-base leading-relaxed text-slate-700">
-                    {{ $visionMission['mission'] ?? 'To provide a stimulating, safe, and loving learning environment with balanced focus on academics, co-curricular arts, physical vitality, and communication.' }}
+                    {{ $visionMission['mission'] ?? 'To provide a stimulating, safe, and modern learning environment with balanced focus on foundational literacy, board exam excellence, competitive stream preparation, physical vitality, and communication.' }}
                 </p>
             </div>
         </div>
@@ -118,13 +118,13 @@
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div class="max-w-2xl">
                 <span class="eyebrow-badge eyebrow-badge-gold">Academic Excellence</span>
-                <h2 class="mt-3 section-title">Structured Curriculum for Every Age Group</h2>
-                <p class="mt-3 text-slate-600 text-base">Comprehensive progression from early playful foundation to disciplined middle school concept clarity.</p>
+                <h2 class="mt-3 section-title">Structured Curriculum from Pre-Nursery to Class XII</h2>
+                <p class="mt-3 text-slate-600 text-base">Comprehensive progression from joyful foundational play-way learning to senior secondary stream mastery (Science, Commerce & Arts).</p>
             </div>
             <a href="#admissions" class="btn-navy text-sm self-start md:self-auto">Check Class Eligibility →</a>
         </div>
 
-        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             @foreach ($academics as $wing)
                 <article class="modern-card p-7 flex flex-col justify-between relative overflow-hidden group">
                     <div class="absolute top-0 right-0 h-24 w-24 bg-amber-400/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
