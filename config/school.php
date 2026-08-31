@@ -220,9 +220,9 @@ return [
         ],
         [
             'title' => "Vice Principal's Message",
-            'name' => 'Vice Principal',
+            'name' => 'Dr Abhilaksha singh',
             'role' => 'Vice Principal, HMPS',
-            'designation' => 'Academic Coordinator & Student Activities Head',
+            'designation' => 'M.Sc Gold Medalist | D.phil Botany | B .Ed  Academic Coordinator & Student Activities Head',
             'image' => '/images/vice_principal.jpeg',
             'text' => 'We believe in a harmonious blend of scholastic rigor and co-curricular vibrancy. By cultivating disciplined routines, creative expression, competitive exam foundation, and good habits, we prepare our learners to face future challenges with optimism.',
         ],
