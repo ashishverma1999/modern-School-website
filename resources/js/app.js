@@ -272,34 +272,100 @@ const setupBackToTop = () => {
 
 // Language Switcher (English <-> Hindi)
 const setupLanguageTranslator = () => {
-    const triggerTranslation = (targetLang) => {
-        const host = window.location.hostname;
-        const cookieVal = targetLang === 'hi' ? '/en/hi' : '/en/en';
-        document.cookie = `googtrans=${cookieVal}; path=/; domain=${host}`;
-        document.cookie = `googtrans=${cookieVal}; path=/;`;
+    // Reads active language from cookies or translated state
+    const getActiveLanguage = () => {
+        const match = document.cookie.match(/googtrans=(?:%2F|\/)[^/;\s]+(?:%2F|\/)([a-z]{2})/i);
+        if (match && match[1]) {
+            return match[1].toLowerCase();
+        }
+        return 'en';
+    };
 
-        // Update active UI state on all language buttons
-        document.querySelectorAll('[data-language-switcher] .lang-btn').forEach(btn => {
-            if (btn.dataset.lang === targetLang) {
-                btn.classList.add('is-active', 'text-amber-500', 'font-extrabold');
-                btn.classList.remove('text-slate-300', 'text-slate-600');
-            } else {
-                btn.classList.remove('is-active', 'text-amber-500', 'font-extrabold');
-                btn.classList.add(btn.closest('.bg-white') ? 'text-slate-600' : 'text-slate-300');
-            }
+    // Update active UI classes on all language buttons
+    const updateLanguageSwitcherUI = (activeLang) => {
+        document.querySelectorAll('[data-language-switcher]').forEach(container => {
+            const isDark = container.closest('.bg-\\[\\#07192f\\]') || !container.classList.contains('bg-white');
+            container.querySelectorAll('.lang-btn').forEach(btn => {
+                const isActive = btn.dataset.lang === activeLang;
+                if (isActive) {
+                    btn.classList.add('is-active');
+                    if (isDark) {
+                        btn.className = 'lang-btn is-active px-2.5 py-0.5 rounded-md transition-all font-bold bg-amber-400 text-slate-950 shadow-xs';
+                    } else {
+                        btn.className = 'lang-btn is-active px-3 py-1 rounded-md text-xs font-bold transition-all bg-amber-500 text-white shadow-xs';
+                    }
+                } else {
+                    btn.classList.remove('is-active');
+                    if (isDark) {
+                        btn.className = 'lang-btn px-2.5 py-0.5 rounded-md transition-all font-semibold text-slate-300 hover:text-white hover:bg-white/10';
+                    } else {
+                        btn.className = 'lang-btn px-3 py-1 rounded-md text-xs font-semibold transition-all text-slate-600 hover:text-slate-950 hover:bg-slate-100';
+                    }
+                }
+            });
+        });
+    };
+
+    // Completely clear all googtrans cookies across current host and parent domains
+    const clearGoogleTranslateCookies = () => {
+        const host = window.location.hostname;
+        const domains = [host, `.${host}`, ''];
+        const parts = host.split('.');
+        for (let i = 0; i < parts.length - 1; i++) {
+            domains.push('.' + parts.slice(i).join('.'));
+        }
+
+        const paths = ['/', window.location.pathname];
+        const cookieNames = ['googtrans', 'googtrans_saved'];
+
+        cookieNames.forEach(name => {
+            domains.forEach(domain => {
+                paths.forEach(path => {
+                    const domainStr = domain ? `; domain=${domain}` : '';
+                    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=${path}${domainStr}`;
+                });
+            });
         });
 
-        // Trigger Google Translate frame select
-        const select = document.querySelector('.goog-te-combo');
-        if (select) {
-            select.value = targetLang;
-            select.dispatchEvent(new Event('change'));
-        } else {
-            window.location.reload();
+        if (window.location.hash && window.location.hash.includes('googtrans')) {
+            history.replaceState('', document.title, window.location.pathname + window.location.search);
         }
     };
 
-    // Attach listeners
+    const triggerTranslation = (targetLang) => {
+        const currentLang = getActiveLanguage();
+        if (targetLang === currentLang) {
+            return;
+        }
+
+        if (targetLang === 'en') {
+            // Revert back to original English:
+            // Clear all googtrans cookies and reload to restore clean English DOM
+            clearGoogleTranslateCookies();
+            updateLanguageSwitcherUI('en');
+            window.location.reload();
+            return;
+        }
+
+        if (targetLang === 'hi') {
+            const host = window.location.hostname;
+            document.cookie = `googtrans=/en/hi; path=/; domain=${host}`;
+            document.cookie = `googtrans=/en/hi; path=/; domain=.${host}`;
+            document.cookie = `googtrans=/en/hi; path=/;`;
+
+            updateLanguageSwitcherUI('hi');
+
+            const select = document.querySelector('.goog-te-combo');
+            if (select) {
+                select.value = 'hi';
+                select.dispatchEvent(new Event('change'));
+            } else {
+                window.location.reload();
+            }
+        }
+    };
+
+    // Attach click listeners to language buttons
     document.querySelectorAll('[data-language-switcher] .lang-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -308,15 +374,13 @@ const setupLanguageTranslator = () => {
         });
     });
 
-    // Check existing cookie on load
-    const match = document.cookie.match(/googtrans=\/en\/([a-z]{2})/);
-    const activeLang = match ? match[1] : 'en';
-    document.querySelectorAll('[data-language-switcher] .lang-btn').forEach(btn => {
-        if (btn.dataset.lang === activeLang) {
-            btn.classList.add('is-active', 'text-amber-500', 'font-extrabold');
-        } else {
-            btn.classList.remove('is-active', 'text-amber-500', 'font-extrabold');
-        }
+    // Sync initial state on load
+    const activeLang = getActiveLanguage();
+    updateLanguageSwitcherUI(activeLang);
+
+    // Sync when Google Translate initializes or changes
+    window.addEventListener('google-translate-ready', () => {
+        updateLanguageSwitcherUI(getActiveLanguage());
     });
 };
 

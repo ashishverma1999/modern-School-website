@@ -16,13 +16,12 @@
         </div>
         <div class="flex flex-wrap items-center gap-3 self-end sm:self-auto">
             <!-- Language Switcher (English <-> Hindi) -->
-            <div class="inline-flex items-center rounded-lg bg-white/10 p-0.5 border border-white/15 text-xs font-bold" data-language-switcher>
-                <button type="button" class="lang-btn is-active px-2 py-0.5 rounded transition-all text-amber-400 font-extrabold" data-lang="en" title="English">
+            <div class="inline-flex items-center rounded-lg bg-white/10 p-0.5 border border-white/15 text-xs font-bold notranslate" translate="no" data-language-switcher>
+                <button type="button" class="lang-btn is-active px-2.5 py-0.5 rounded-md transition-all font-bold bg-amber-400 text-slate-950 shadow-xs" data-lang="en" title="English">
                     🇬🇧 EN
                 </button>
-                <span class="text-white/30 text-[10px]">|</span>
-                <button type="button" class="lang-btn px-2 py-0.5 rounded transition-all text-slate-300 hover:text-white" data-lang="hi" title="हिन्दी (Hindi)">
-                    🇮🇳 हिन्दी
+                <button type="button" class="lang-btn px-2.5 py-0.5 rounded-md transition-all font-semibold text-slate-300 hover:text-white hover:bg-white/10" data-lang="hi" title="Hindi">
+                    🇮🇳 HI
                 </button>
             </div>
 

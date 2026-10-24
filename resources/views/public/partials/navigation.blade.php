@@ -87,13 +87,13 @@
             <div class="mt-4 pt-4 border-t border-slate-100 flex flex-col gap-3">
                 <!-- Mobile Language Selector -->
                 <div class="flex items-center justify-between rounded-xl bg-slate-100 p-2.5">
-                    <span class="text-xs font-bold text-slate-700">Language / भाषा:</span>
-                    <div class="inline-flex rounded-lg bg-white p-1 shadow-xs border border-slate-200" data-language-switcher>
-                        <button type="button" class="lang-btn is-active px-2.5 py-1 rounded text-xs font-bold text-amber-600" data-lang="en">
-                            🇬🇧 English
+                    <span class="text-xs font-bold text-slate-700">Language:</span>
+                    <div class="inline-flex rounded-lg bg-white p-1 shadow-xs border border-slate-200 text-xs notranslate" translate="no" data-language-switcher>
+                        <button type="button" class="lang-btn is-active px-3 py-1 rounded-md text-xs font-bold transition-all bg-amber-500 text-white shadow-xs" data-lang="en" title="English">
+                            🇬🇧 EN
                         </button>
-                        <button type="button" class="lang-btn px-2.5 py-1 rounded text-xs font-bold text-slate-600" data-lang="hi">
-                            🇮🇳 हिन्दी
+                        <button type="button" class="lang-btn px-3 py-1 rounded-md text-xs font-semibold transition-all text-slate-600 hover:text-slate-950 hover:bg-slate-100" data-lang="hi" title="Hindi">
+                            🇮🇳 HI
                         </button>
                     </div>
                 </div>

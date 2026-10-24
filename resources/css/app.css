@@ -389,6 +389,8 @@
     /* Google Translate Styling */
     .goog-te-banner-frame.skiptranslate,
     .goog-te-banner-frame,
+    .VIpgJd-ZVi9od-ORHb-OEVmcd,
+    iframe[class*="goog-te-banner"],
     #goog-gt-tt,
     .goog-te-balloon-frame {
         display: none !important;
